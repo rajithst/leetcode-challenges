@@ -4,8 +4,10 @@ Leetcode challenges Python implementation
 
 | Topic | Link |
 | ------ | ------ |
-| Binary Trees | https://github.com/rajithst/leetcode-challenges/tree/master/binary_tree |
+| Arrays | https://github.com/rajithst/leetcode-challenges/tree/master/arrays/ |
 | Binary Search Trees | https://github.com/rajithst/leetcode-challenges/tree/master/binary_search_tree |
+| Binary Trees | https://github.com/rajithst/leetcode-challenges/tree/master/binary_tree |
+| Graphs | https://github.com/rajithst/leetcode-challenges/tree/master/graph |
 | Linked List | https://github.com/rajithst/leetcode-challenges/tree/master/linked-list |
-| Arrays | https://github.com/rajithst/leetcode-challenges/tree/master/arrays/medium |
+
 
