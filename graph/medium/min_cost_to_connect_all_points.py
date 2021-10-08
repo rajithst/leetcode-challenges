@@ -85,3 +85,39 @@ class Solution:
                 if not visited[n[0]]:
                     pq.insert(n)
         return mst
+
+
+import heapq as heap
+
+
+class Solution:
+    def minCostConnectPoints(self, points: List[List[int]]) -> int:
+
+        adj_list = {}
+        for i in range(len(points)):
+            if i not in adj_list:
+                adj_list[i] = []
+            for j in range(len(points)):
+                if i != j:
+                    weight = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
+                    node = (weight, j)
+                    adj_list[i].append(node)
+
+        visited = {}
+        for k in range(len(points)):
+            visited[k] = False
+        pq = []
+        heap.heappush(pq, (0, 0))
+        mst = 0
+        while len(pq) > 0:
+            best_edge = heap.heappop(pq)
+            node_val = best_edge[1]
+            weight = best_edge[0]
+            if visited[node_val]:
+                continue
+            mst += weight
+            visited[node_val] = True
+            for n in adj_list[node_val]:
+                if not visited[n[1]]:
+                    heap.heappush(pq, n)
+        return mst
