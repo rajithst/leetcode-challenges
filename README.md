@@ -11,5 +11,6 @@ Leetcode challenges Python implementation
 | Linked List | https://github.com/rajithst/leetcode-challenges/tree/master/linked-list |
 | Matrix | https://github.com/rajithst/leetcode-challenges/tree/master/matrix |
 | Trees | https://github.com/rajithst/leetcode-challenges/tree/master/tree |
+| Trie | https://github.com/rajithst/leetcode-challenges/tree/master/trie |
 
 
