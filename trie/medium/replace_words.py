@@ -41,7 +41,7 @@ class Solution:
         for d in dictionary:
             tr.insert(d)
         res = []
-        for wd in dictionary:
+        for wd in sentence.split(" "):
             rest = tr.search(wd)
             res.append(rest)
         return " ".join(res)
