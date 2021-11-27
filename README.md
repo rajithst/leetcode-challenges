@@ -12,5 +12,9 @@ Leetcode challenges Python implementation
 | Matrix | https://github.com/rajithst/leetcode-challenges/tree/master/matrix |
 | Trees | https://github.com/rajithst/leetcode-challenges/tree/master/tree |
 | Trie | https://github.com/rajithst/leetcode-challenges/tree/master/trie |
+| Dynamic Programming | https://github.com/rajithst/leetcode-challenges/tree/master/dynamic_programming |
+| Heap | https://github.com/rajithst/leetcode-challenges/tree/master/heap |
+| Union Find |https://github.com/rajithst/leetcode-challenges/tree/master/union_find |
+
 
 
