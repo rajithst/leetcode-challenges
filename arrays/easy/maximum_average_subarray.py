@@ -12,3 +12,4 @@ class Solution:
             cs -= nums[i - k]
             mv = max(mv, cs)
         return mv / k
+
