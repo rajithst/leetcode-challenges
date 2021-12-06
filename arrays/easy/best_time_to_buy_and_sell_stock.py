@@ -16,3 +16,16 @@ class Solution:
             elif prices[i] - min_price > max_profit:
                 max_profit = prices[i] - min_price
         return max_profit
+
+
+p1 = 0
+p2 = 1
+arr = [2, 3, 3, 3, 6, 9, 9]
+next_non_duplicate = 1
+
+i = 1
+while(i < len(arr)):
+    if arr[next_non_duplicate - 1] != arr[i]:
+      arr[next_non_duplicate] = arr[i]
+      next_non_duplicate += 1
+    i += 1
