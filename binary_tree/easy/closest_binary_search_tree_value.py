@@ -27,3 +27,23 @@ class Solution:
 
         dfs(root)
         return self.ans
+
+
+class Solution:
+    def closestValue(self, root: Optional[TreeNode], target: float) -> int:
+
+        cv = float("inf")
+
+        def helper(root, target, cv):
+            if root is None:
+                return cv
+            if abs(target - root.val) < abs(target - cv):
+                cv = root.val
+            if target > root.val:
+                return helper(root.right, target, cv)
+            elif target < root.val:
+                return helper(root.left, target, cv)
+            else:
+                return cv
+
+        return helper(root, target, cv)
