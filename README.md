@@ -15,6 +15,6 @@ Leetcode challenges Python implementation
 | Dynamic Programming | https://github.com/rajithst/leetcode-challenges/tree/master/dynamic_programming |
 | Heap | https://github.com/rajithst/leetcode-challenges/tree/master/heap |
 | Union Find |https://github.com/rajithst/leetcode-challenges/tree/master/union_find |
-
-
+| Design |https://github.com/rajithst/leetcode-challenges/tree/master/design |
+| Binary Search |https://github.com/rajithst/leetcode-challenges/tree/master/binary_search |
 
