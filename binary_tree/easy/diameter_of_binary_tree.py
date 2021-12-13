@@ -10,19 +10,18 @@ class TreeNode:
 
 
 class Solution:
-    def __init__(self):
-        self.max_dim = 0
-
     def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
-        def dfs(node):
+        max_diameter = 0
+
+        def calc_diameter(node):
+            nonlocal max_diameter
             if node is None:
                 return 0
 
-            lh = dfs(node.left)
-            rh = dfs(node.right)
-            self.max_dim = max(self.max_dim, lh + rh)
+            left_height = calc_diameter(node.left)
+            right_height = calc_diameter(node.right)
+            max_diameter = max(max_diameter, left_height + right_height + 1)
+            return max(left_height, right_height) + 1
 
-            return max(lh, rh) + 1
-
-        dfs(root)
-        return self.max_dim
+        calc_diameter(root)
+        return max_diameter - 1
