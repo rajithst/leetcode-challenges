@@ -30,3 +30,21 @@ class Solution:
                     que.append(cn.right)
             result.append(lv)
         return result
+
+
+class Solution:
+    def largestValues(self, root: Optional[TreeNode]) -> List[int]:
+
+        mem = {}
+
+        def dfs(node, depth):
+            if node is None:
+                return
+            if depth not in mem:
+                mem[depth] = float("-inf")
+            mem[depth] = max(mem[depth], node.val)
+            dfs(node.left, depth + 1)
+            dfs(node.right, depth + 1)
+
+        dfs(root, 0)
+        return mem.values()
