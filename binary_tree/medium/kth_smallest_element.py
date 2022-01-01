@@ -9,17 +9,25 @@ class TreeNode:
         self.right = right
 
 
+class TreeInfo:
+    def __init__(self, nov, lv):
+        self.nov = nov
+        self.lv = lv
+
+
 class Solution:
     def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
-        results = []
 
-        def dfs(node):
-            if node is None:
+        def dfs(node, ti, k):
+            if node is None or ti.nov >= k:
                 return
 
-            dfs(node.left)
-            results.append(node.val)
-            dfs(node.right)
+            dfs(node.left, ti, k)
+            if ti.nov < k:
+                ti.nov += 1
+                ti.lv = node.val
+                dfs(node.right, ti, k)
 
-        dfs(root)
-        return results[k - 1]
+        ti = TreeInfo(0, -1)
+        dfs(root, ti, k)
+        return ti.lv
