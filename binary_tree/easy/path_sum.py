@@ -14,14 +14,11 @@ class Solution:
 
         def dfs(node, pathsum):
             if node is None:
-                return
+                return False
             pathsum += node.val
             if pathsum == targetSum and node.left is None and node.right is None:
                 return True
-            if node.left is None and node.right is None:
-                pathsum -= node.val
+
             return dfs(node.left, pathsum) or dfs(node.right, pathsum)
 
-        if dfs(root, 0):
-            return True
-        return False
+        return dfs(root, 0)
