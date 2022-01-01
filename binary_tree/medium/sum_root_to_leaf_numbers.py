@@ -10,23 +10,15 @@ class TreeNode:
 
 
 class Solution:
-    def __init__(self):
-        self.total = 0
-
     def sumNumbers(self, root: Optional[TreeNode]) -> int:
 
-        results = ""
-
-        def dfs(node, results):
+        def dfs(node, pathsum):
             if node is None:
-                return
+                return 0
 
-            results += str(node.val)
-            dfs(node.left, results)
-            dfs(node.right, results)
+            pathsum = pathsum * 10 + node.val
             if node.left is None and node.right is None:
-                self.total += int(results)
-                results = results[:-1]
+                return pathsum
+            return dfs(node.left, pathsum) + dfs(node.right, pathsum)
 
-        dfs(root, results)
-        return self.total
+        return dfs(root, 0)
