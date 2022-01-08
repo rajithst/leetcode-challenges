@@ -17,4 +17,4 @@ Leetcode challenges Python implementation
 | Union Find |https://github.com/rajithst/leetcode-challenges/tree/master/union_find |
 | Design |https://github.com/rajithst/leetcode-challenges/tree/master/design |
 | Binary Search |https://github.com/rajithst/leetcode-challenges/tree/master/binary_search |
-
+| Hashmap| |
