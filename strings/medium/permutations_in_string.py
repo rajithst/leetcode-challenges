@@ -23,12 +23,12 @@ class Solution:
                 if char_frequency[current_char] == 0:
                     matched += 1
             # if any point,matched distinct character count equal to length of freq map
-            # we found a permutaton,return true
+            # we found a permutation,return true
             if matched == len(char_frequency):
                 return True
 
             # if window end is greater than the length of the pattern
-            # remove characters from begining of the window
+            # remove characters from beginning of the window
             if window_end >= len(s1) - 1:
                 remove_char = s2[window_start]
                 # if the character to be remove was in part of the freq map
@@ -37,7 +37,7 @@ class Solution:
                     # decrement by one
                     if char_frequency[remove_char] == 0:
                         matched -= 1
-                    # since we are removing from the window,freqency count should increment
+                    # since we are removing from the window,frequency count should increment
                     char_frequency[remove_char] += 1
                 window_start += 1
         return False
