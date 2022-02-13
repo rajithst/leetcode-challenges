@@ -20,6 +20,6 @@ class Solution:
 
         dfs(0)
         for k in visited.keys():
-            if visited[k] == False:
+            if not visited[k]:
                 return False
         return True
